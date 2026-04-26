@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Droplets, Sparkles, Flame, BookHeart, ArrowRight, Quote } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import { Github, Linkedin, AtSign } from "lucide-react";
 
 const Index = () => {
   const { user } = useAuth();
@@ -159,9 +160,46 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="relative container max-w-6xl py-10 text-center text-sm text-muted-foreground border-t border-border">
-        <p className="font-hand text-2xl">Made with 🍯 for tiny daily learners.</p>
-      </footer>
+    <footer className="relative container max-w-6xl py-10 text-center text-sm text-muted-foreground border-t border-border">
+      
+      <p className="font-hand text-2xl">
+        Built by Sarah, for curious minds. A tiny habit I’m building, join in!
+      </p>
+
+      <div className="flex justify-center gap-6 mt-6">
+        <a
+          href="https://github.com/sarah-elbahloul/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="hover:text-foreground transition-colors"
+        >
+          <Github size={20} />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/sarah-elbahloul/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="hover:text-foreground transition-colors"
+        >
+          <Linkedin size={20} />
+        </a>
+
+        <a
+          href="mailto:sa.albahloul@gmail.com"
+          aria-label="Email"
+          className="hover:text-foreground transition-colors"
+        >
+          <AtSign size={20} />
+        </a>
+      </div>
+
+      <p className="mt-6 text-xs opacity-70">
+        © {new Date().getFullYear()} Sarah Elbahloul
+      </p>
+    </footer>
     </div>
   );
 };
